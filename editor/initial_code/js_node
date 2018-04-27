@@ -1,0 +1,17 @@
+"use strict";
+
+function friday(day) {
+    // your code here
+    return 0;
+}
+
+var assert = require('assert');
+if (!global.is_checking) {
+    console.log('Example:')
+    console.log(friday('23.04.2018'))
+
+    // These "asserts" are used for self-checking and not for an auto-testing
+    assert.deepEqual(friday('23.04.2018'), 4)
+    assert.deepEqual(friday('01.01.1999'), 0)
+    console.log("Coding complete? Click 'Check' to earn cool rewards!");
+}

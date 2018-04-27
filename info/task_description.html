@@ -1,0 +1,53 @@
+<!-- Describe task in general -->
+
+<p>
+Friday is an awesome day. The end of the week, when you are waiting for the weekends and interesting events. It's good to know how many days are left to it, does it?
+</p>
+
+<p>
+Your task is to write a function which should to count this. The argument will be a date in string format look like - 'dd.mm.yyyy' where 'dd' - day, 'mm' - month and 'yyyy' - year.<br>
+For example, if that day is Thursday - the answer will be 1. If that day is Monday, the result is 4. And if that day is Friday - you should return 0.
+</p>
+
+<p style="text-align: center;">
+    <img  title="Friday" src="{{MEDIA}}friday.png" alt="example" style="max-height: 140px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> Date as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The amount of days left to the Friday. 
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">friday('23.04.2018') == 4
+friday('01.01.1999') == 0
+</pre>
+{% else %}
+<pre class="brush: python">friday('23.04.2018') == 4
+friday('01.01.1999') == 0
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used:</strong>
+    Work with dates is very useful skill which can be used in many spheres - from simple ordering by date to analysis of the global tendencies which changes with time.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition</strong>:<br>
+    1 <= year <= 3000
+</p>
