@@ -1,0 +1,105 @@
+
+
+
+
+
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        З чого мені розпочати?
+    </div>
+    <div class="answer">
+        Спочатку, тобі потрібно знайти який день тижню ховається за даною датою. А потім порахувати кількість днів до П'ятниці.
+        Ця інформація буде тобі корисна <a target="_blank" href="https://docs.python.org/3.10/library/datetime.html?highlight=time#module-datetime">"Basic date and time types"</a>.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна допомога з цим...
+    </div>
+    <div class="answer">
+        Ти можеш використати метод "date.weekday()". Повертає день тижню як ціле число, де Понеділок це 0, а Неділя - 6.
+        <pre class="brush: python">
+from datetime import date
+
+date(2002, 12, 4).weekday()
+>> 2  # Середа
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я не розумію, як мені підрахувати кількість днів до П'ятниці.
+    </div>
+    <div class="answer">
+        Використай умову "if", щоб перевірити чи заданий день йде до П'ятниці, чи після.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Не можу зрозуміти...
+    </div>
+    <div class="answer">
+        Добре.
+        <pre class="brush: python">
+from datetime import date
+
+day = date(2002, 12, 4).weekday()
+if day <= 4:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ясно! Але... задана дата це рядок. Як його перетворити у дату?
+    </div>
+    <div class="answer">
+        Як варіант можеш використати генератор списку. Ось так:
+        <pre class="brush: python">
+from datetime import date
+
+calendar = [int(i) for i in day.split('.')]  # Ми конвертуємо кожний елемент
+                                             # розділеного рядку у ціле число
+day = date(calendar[2], calendar[1], calendar[0]).weekday()
+if day <= 4:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Останнє запитання. Як фінальний повинен виглядати?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+from datetime import date
+
+def friday(day: str) -> int:
+    calendar = [int(i) for i in day.split('.')]
+    day = date(calendar[2], calendar[1], calendar[0]).weekday()
+    if day <= 4:
+        return 4 - day
+    else:
+        return 11 - day
+        </pre>
+
+        <p>Або можна використати коротший варіант</p>
+
+        <pre class="brush: python">
+from datetime import date
+
+def friday(day: str) -> int:
+    days = [int(i) for i in day.split('.')]
+    return 4 - d if (d := date(days[2], days[1], days[0]).weekday()) <= 4 else 11 - d
+        </pre>
+    </div>
+</div>
+
+
+</body>

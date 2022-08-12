@@ -11,37 +11,37 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": '12.04.2018',
+            "input": ['12.04.2018'],
             "answer": 1
         },
         {
-            "input": '01.01.1999',
+            "input": ['01.01.1999'],
             "answer": 0
         }
     ],
     "Extra": [
         {
-            "input": '20.11.1990',
+            "input": ['20.11.1990'],
             "answer": 3
         },
         {
-            "input": '11.11.1111',
+            "input": ['11.11.1111'],
             "answer": 6
         },
         {
-            "input": '09.07.0168',
+            "input": ['09.07.0168'],
             "answer": 6
         },
         {
-            "input": '12.12.2112',
+            "input": ['12.12.2112'],
             "answer": 4
         },
         {
-            "input": '31.12.2999',
+            "input": ['31.12.2999'],
             "answer": 3
         },
         {
-            "input": '01.01.3000',
+            "input": ['01.01.3000'],
             "answer": 2
         }
     ]
