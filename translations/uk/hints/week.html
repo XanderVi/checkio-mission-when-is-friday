@@ -9,7 +9,7 @@
         З чого мені розпочати?
     </div>
     <div class="answer">
-        Спочатку, тобі потрібно знайти який день тижню ховається за даною датою. А потім порахувати кількість днів до П'ятниці.
+        Спочатку, тобі потрібно знайти який день тижня ховається за даною датою. А потім порахувати кількість днів до П'ятниці.
         Ця інформація буде тобі корисна <a target="_blank" href="https://docs.python.org/3.10/library/datetime.html?highlight=time#module-datetime">"Basic date and time types"</a>.
 
     </div>
@@ -19,7 +19,7 @@
         Мені потрібна допомога з цим...
     </div>
     <div class="answer">
-        Ти можеш використати метод "date.weekday()". Повертає день тижню як ціле число, де Понеділок це 0, а Неділя - 6.
+        Ти можеш використати метод "date.weekday()". Повертає день тижня як ціле число, де Понеділок це 0, а Неділя - 6.
         <pre class="brush: python">
 from datetime import date
 
@@ -41,7 +41,7 @@ date(2002, 12, 4).weekday()
         Не можу зрозуміти...
     </div>
     <div class="answer">
-        Добре.
+        Давай покажу:
         <pre class="brush: python">
 from datetime import date
 
@@ -55,7 +55,7 @@ else:
 </div>
 <div class="question-answer">
     <div class="question">
-        Ясно! Але... задана дата це рядок. Як його перетворити у дату?
+        Ясно! Але... задана дата це рядок. Як його перетворити на числа?
     </div>
     <div class="answer">
         Як варіант можеш використати генератор списку. Ось так:
@@ -63,7 +63,7 @@ else:
 from datetime import date
 
 calendar = [int(i) for i in day.split('.')]  # Ми конвертуємо кожний елемент
-                                             # розділеного рядку у ціле число
+                                             # розділеного рядка у ціле число
 day = date(calendar[2], calendar[1], calendar[0]).weekday()
 if day <= 4:
     ...
